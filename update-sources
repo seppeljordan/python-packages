@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -x
+
+function fetchsource {
+    mkdir -p "$2"
+    nix-prefetch-github "$1" "$2" --rev "$3" > $2/$1.json
+}
+
+fetchsource alecthomas injector "0.18.4"
