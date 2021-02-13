@@ -1,5 +1,5 @@
 {
-  description = "nix-prefetch-github";
+  description = "Python packages as flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -30,7 +30,7 @@
           packages = { inherit (pkgs) python3; };
           checks = {
             inherit (pkgs.python3.pkgs)
-              injector pytest-profiling parsemon2;
+              injector pytest-profiling parsemon2 auditwheel;
           };
         });
     in { inherit overlay packageOverrides; } // systemDependent;
