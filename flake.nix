@@ -20,7 +20,10 @@
           };
         in {
           packages = { inherit (pkgs) python3; };
-          checks = { inherit (pkgs.python3.pkgs) injector; };
+          checks = {
+            inherit (pkgs.python3.pkgs)
+              injector pytest-profiling bumpv;
+          };
         });
     in { inherit overlay packageOverrides; } // systemDependent;
 }

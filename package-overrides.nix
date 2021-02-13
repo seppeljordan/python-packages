@@ -1,3 +1,7 @@
 self: super:
 let callPackage = super.callPackage;
-in { injector = callPackage ./injector.nix { }; }
+in {
+  bumpv = self.callPackage ./bumpv.nix { };
+  injector = callPackage ./injector.nix { };
+  pytest-profiling = self.callPackage ./pytest-profiling.nix { };
+}

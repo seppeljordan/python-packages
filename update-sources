@@ -8,3 +8,4 @@ function fetchsource {
 }
 
 fetchsource alecthomas injector "0.18.4"
+fetchsource seppeljordan bumpv master
