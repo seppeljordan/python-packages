@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+import subprocess
+import pathlib
+import os
+
+
+nix_files = [
+    pathlib.Path(root) / filename
+    for root, _, files in os.walk('.')
+    for filename in files
+    if filename.endswith(".nix")
+]
+
+def format_file(path):
+    # We only want to run nixfmt if the file actually need
+    # reformatting to avoid unnecessary reloads of direnv and similar
+    # tools.
+    process = subprocess.run(['nixfmt', '--check', path], check=False)
+    if process.returncode != 0:
+        subprocess.run(['nixfmt', path])
+
+for path in nix_files:
+    format_file(path)

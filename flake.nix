@@ -25,6 +25,8 @@
             system = system;
           };
         in {
+          devShell =
+            pkgs.mkShell { buildInputs = with pkgs; [ nixfmt python3 ]; };
           packages = { inherit (pkgs) python3; };
           checks = {
             inherit (pkgs.python3.pkgs)
