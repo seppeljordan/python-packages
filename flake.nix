@@ -30,7 +30,7 @@
           packages = { inherit (pkgs) python3; };
           checks = {
             inherit (pkgs.python3.pkgs)
-              injector pytest-profiling bumpv parsemon2;
+              injector pytest-profiling parsemon2;
           };
         });
     in { inherit overlay packageOverrides; } // systemDependent;
