@@ -68,11 +68,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1613258013,
-        "narHash": "sha256-3u2QCUPC9ONuddvR3tMEbblPjBL7wxwIxSaIn2xZsQQ=",
+        "lastModified": 1613258453,
+        "narHash": "sha256-bnj7YlCZHq+DBtAhXUCx4nLfAKXkxDx+IpapOvZoflE=",
         "owner": "seppeljordan",
         "repo": "parsemon2",
-        "rev": "2a5de14082183102a6a3e766d11e2bad99c3e4d7",
+        "rev": "851f031bc349d8e9c89911260772517f476d2174",
         "type": "github"
       },
       "original": {
