@@ -30,13 +30,63 @@
         "type": "github"
       }
     },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1610051610,
+        "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3982c9903e93927c2164caa727cd3f6a0e6d14cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nix-parsec": {
+      "locked": {
+        "lastModified": 1614005190,
+        "narHash": "sha256-QH7ikvLIK2E/+ql4cEl6/kUObaJhNXEXMzqokqT9wFg=",
+        "owner": "seppeljordan",
+        "repo": "nix-parsec",
+        "rev": "962eff37f778cd96644433e3d13ab9da680f4f90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "seppeljordan",
+        "repo": "nix-parsec",
+        "type": "github"
+      }
+    },
+    "nix-setuptools": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nix-parsec": "nix-parsec",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1614079675,
+        "narHash": "sha256-UhpG1/76b5z3ARLJs7v0DwheCBnQWnYfTRoQYvJmnE8=",
+        "owner": "seppeljordan",
+        "repo": "nix-setuptools",
+        "rev": "274b1a23f3256251ceed44017b737cd9e1525838",
+        "type": "github"
+      },
+      "original": {
+        "owner": "seppeljordan",
+        "repo": "nix-setuptools",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1612996220,
-        "narHash": "sha256-l2kzWXxL3vXr8VxUzRtORPJS0nFQ3E5kBPF/AYAK0wI=",
+        "lastModified": 1614029319,
+        "narHash": "sha256-PXu4Vf05f3E2vpl7/Iop/O+gw655O3SONYVFxbl0kuc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "758b29b5a28b818e311ad540637a5c1e40867489",
+        "rev": "c7d0dbe094c988209edac801eb2a0cc21aa498d8",
         "type": "github"
       },
       "original": {
@@ -48,11 +98,24 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1612369752,
-        "narHash": "sha256-JtncDAt+qqUvdaIEpXmLXveu/AeXOPOYGDbpPoG2zgA=",
+        "lastModified": 1612545171,
+        "narHash": "sha256-AZkSuO7H055eDD4KWBEDCX/R5fvw0vUMCErvQvYSEhA=",
+        "path": "/nix/store/85kgdnkapn3sy1f985hln9gsvxxp8zfk-source",
+        "rev": "536fe36e23ab0fc8b7f35c24603422eee9fc17a2",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1614029319,
+        "narHash": "sha256-PXu4Vf05f3E2vpl7/Iop/O+gw655O3SONYVFxbl0kuc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7cbec40a09533dd9c525d6ab94dddfe77768101a",
+        "rev": "c7d0dbe094c988209edac801eb2a0cc21aa498d8",
         "type": "github"
       },
       "original": {
@@ -65,14 +128,15 @@
     "parsemon2": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2"
+        "nix-setuptools": "nix-setuptools",
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1613258453,
-        "narHash": "sha256-bnj7YlCZHq+DBtAhXUCx4nLfAKXkxDx+IpapOvZoflE=",
+        "lastModified": 1614119423,
+        "narHash": "sha256-5IjqaTlxZaFaByWrdy6k0zSfrObijbo+jVhVIiyPEhU=",
         "owner": "seppeljordan",
         "repo": "parsemon2",
-        "rev": "851f031bc349d8e9c89911260772517f476d2174",
+        "rev": "5dda67fcd379ac0bca4f243688f2f9bc2d541e2d",
         "type": "github"
       },
       "original": {

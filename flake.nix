@@ -10,14 +10,15 @@
   outputs = { self, nixpkgs, flake-utils, parsemon2 }:
     let
       packageOverrides = let
-        parsemonOverrides = self: super: {
-          parsemon2 = self.callPackage parsemon2.lib.package { };
-        };
+        parsemonOverrides = parsemon2.lib.packageOverrides;
         selfOverrides = import ./package-overrides.nix;
       in nixpkgs.lib.composeExtensions parsemonOverrides selfOverrides;
-      overlay = final: prev: {
-        python3 = prev.python3.override { inherit packageOverrides; };
-      };
+      overlay = let
+        flakeOverlay = final: prev: {
+          python3 = prev.python3.override { inherit packageOverrides; };
+        };
+      in final: prev:
+      (nixpkgs.lib.composeExtensions parsemon2.overlay flakeOverlay) final prev;
       systemDependent = flake-utils.lib.eachDefaultSystem (system:
         let
           pkgs = import nixpkgs {
